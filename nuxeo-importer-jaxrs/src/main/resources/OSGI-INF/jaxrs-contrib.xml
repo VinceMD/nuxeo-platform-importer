@@ -5,6 +5,8 @@
              point="resource">
     <resource path="fileImporter"
               class="org.nuxeo.ecm.platform.importer.executor.jaxrs.HttpFileImporterExecutor"/>
+    <resource path="fileImporterLoadConfig"
+                class="org.nuxeo.ecm.platform.importer.executor.jaxrs.HttpScannerFilesImporterExecutor"/>
     <resource path="randomImporter"
               class="org.nuxeo.ecm.platform.importer.executor.jaxrs.RandomImporterExecutor"/>
   </extension>
