@@ -36,3 +36,20 @@ You can also the generic HTTP GUI client from the rest-client java project::
 
 Don't forget to fill in the 'Auth' tab with your user credentials.
 
+API call for Scan Importer
+=======================================================
+
+Update Nuxeo Studio package from your local instance. Make sure your studio specifies a scan importer config.
+
+make sure the import folders exists on the filesystem of the Nuxeo node. Something like (defined in the scanner config above):
+ /mnt/tmp/nuxeo/images/import/input
+ /mnt/tmp/nuxeo/images/import/imported
+ 
+
+Copy some xml files in the input folder 
+
+Launch logging (does not work yet): curl --basic -u 'Administrator:Administrator' "http://localhost:8080/nuxeo/site/scanner/logActivate"
+
+Trigger the ingestion:  curl --basic -u 'Administrator:Administrator' "http://localhost:8080/nuxeo/site/scanner/runWithConfigLoad"
+Check in the console if files are getting processed.
+
